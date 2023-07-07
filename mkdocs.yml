@@ -1,0 +1,31 @@
+site_name: Aanpassen Hydromedah
+site_url: https://d2hydro.github.io/hydromedah
+theme:
+  name: "material"
+  language: en
+  logo: icons/logo/globe_only.png
+  favicon: icons/logo/favicon.png
+  highlightjs: true
+  palette: 
+    primary: blue
+  extra:
+    header: docs/header.html
+markdown_extensions:
+    - toc:
+        toc_depth : "1-1"
+
+plugins:
+  - search
+  - mkdocs-jupyter
+  
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/d2hydro/hydromdah
+      
+extra_css:
+    - css/extra.css
+nav:
+    - Inleiding: index.md
+    - Python notebook: updaten_hydromedah.ipynb
+    - Resultaat: resultaat_hydromedah.md
