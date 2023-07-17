@@ -1,0 +1,51 @@
+# Resultaten Hydromedah model
+
+##Resultaat aangepaste peilgebieden
+
+De peilgebieden zijn aangepast zoals beschreven in het Python notebook. 
+In figuur 1 en 2 worden de verschilkaarten weergegeven, waarbij respectievelijk het nieuwe winterpeil minus het Hydromedah winterpeil en het nieuwe zomerpeil minus het Hydromedah zomerpeil worden getoond. Uit deze figuren blijkt dat de peilen over het algemeen zijn verlaagd.
+
+In figuur 1 en 2 zie je verschilkaarten tussen respectievelijk het nieuwe winterpeil minus het Hydromedah winterpeil en het nieuwe zomerpeil minus het Hydromedah zomerpeil. Uit deze figuren blijkt dat de peilen over het algemeen verlaagd zijn. 
+<img src="../figuren/verschilkaartwinterpeilen.png" alt= "winterpeilen" width="110%" height="100%">
+Figuur 1: Verschil nieuw winterpeil minus Hydromedah winterpeil [m] 
+<img src="../figuren/verschilkaartzomerpeilen.png" alt= "zomerpeilen" width="110%" height="100%">
+Figuur 2: Verschil nieuw zomerpeil minus Hydromedah zomerpeil [m]
+
+##Resultaat aangepaste deklaagweerstand 
+Zoals te zien is in de figuur zijn de weerstanden in het LHM in veel gebieden veel hoger dan de weerstand in het LHM. 
+
+<img src="../figuren/C-waarden.png" alt= "C-waarden Hydromedah en LHM" width="100%" height="100%">
+Figuur 3: Weerstand deklaag [dag] in Hydromedah (bovenste figuur) en LHM (onderste figuur)
+
+##Resultaat GXG's
+In deze paragraaf vindt u de resultaten van de GLG, GHG en GVG van:
+- Hydromedah model run gedraaid in 2021 (figuur 4)
+- Hydromedah model run gedraaid in 2023 (figuur 5)
+- aangepaste Hydromedah model gedraaid in 2023 (nieuwe peilgebieden kaart en deklaagweerstand overgenomen uit LHM) (figuur 6)
+
+Zoals te zien is in de figuren zijn de GXG's van 2021 en 2023 niet gelijk. We moeten de oorzaak hiervan nog achterhalen. 
+
+<img src="../figuren/GXG_2021_rapport.png" alt= "" width="100%" height="100%">
+Figuur 4: GXG kaarten van het Hydromedah model (2021)
+
+<img src="../figuren/gxg_huidig_250.png" alt= "" width="100%" height="100%">
+Figuur 5: GXG kaarten van het Hydromedah model (2023)
+
+<img src="../figuren/gxg_huidig_250_C_L1_LHM_Wl.png" alt= "" width="100%" height="100%">
+Figuur 6: GXG kaarten van het aangepaste Hydromedah model(2023):nieuwe peilgebieden kaart en deklaagweerstand overgenomen uit LHM
+
+
+##Resultaat grondwatertrappen
+Hierbij de resultaatfiguren van de grondwatertrappen van:
+- Hydromedah model run gedraaid in 2021 (figuur 7)
+- Hydromedah model run gedraaid in 2023 (figuur 8)
+- aangepaste Hydromedah model gedraaid in 2023 (nieuwe peilgebieden kaart en deklaagweerstand overgenomen uit LHM) (figuur 9)
+
+<img src="../figuren/grondwatertrappen_2021rapport.png" alt= "" width="100%" height="100%">
+Figuur 7: Grondwatertrappen kaart van het Hydromedah model (2021)
+
+<img src="../figuren/grondwatertrappen_huidig_250.png" alt= "" width="100%" height="100%">
+Figuur 8: Grondwatertrappen kaart van Hydromedah model (2023)
+
+<img src="../figuren/grondwatertrappen_huidig_250_C_L1_LHM_Wl.png" alt= "" width="100%" height="100%">
+Figuur 9: Grondwatertrappen kaart van het aangepaste Hydromedah model (2023):nieuwe peilgebieden kaart en deklaagweerstand overgenomen uit LHM

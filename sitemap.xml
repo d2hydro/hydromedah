@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://d2hydro.github.io/hydromedah/</loc>
-         <lastmod>2023-07-07</lastmod>
+         <lastmod>2023-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://d2hydro.github.io/hydromedah/resultaat_hydromedah/</loc>
-         <lastmod>2023-07-07</lastmod>
+         <lastmod>2023-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://d2hydro.github.io/hydromedah/updaten_hydromedah/</loc>
-         <lastmod>2023-07-07</lastmod>
+         <lastmod>2023-07-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
