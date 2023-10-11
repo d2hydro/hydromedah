@@ -27,5 +27,6 @@ extra_css:
     - css/extra.css
 nav:
     - Inleiding: index.md
-    - Python notebook: updaten_hydromedah.ipynb
-    - Resultaat: resultaat_hydromedah.md
+    - Updaten Hydromedah: updaten_hydromedah.ipynb
+    - Resultaat Hydromedah: resultaat_hydromedah.md
+    - Vergelijking Lateralen: vergelijking_laterals.ipynb
