@@ -1,8 +1,0 @@
-# Inleiding
-We hebben aangepaste peilen in het Hydromedah model op basis van de nieuwe HDSR peilenkaart. De nieuwe waterlooppeilen 
-tov het originele Hydromedah model alsook de effecten op de grondwaterstand zijn in "Resultaat Hydromedah model" beschreven. 
-Hierna volgt een beschrijving van de resultaten wanneer de deklaag weerstand van het Hydromedah model wordt vervangen 
-door LHM deklaagweerstand.
-Het Python notebook waarin u kun de stapsgewijs de aanpassing van het Hydromedah model kunt volgen, vindt u in de paragraaf: 
-"Python-notebook"
-

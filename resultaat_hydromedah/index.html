@@ -18,7 +18,7 @@
       
       
       <link rel="icon" href="../icons/logo/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.3.2">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
     
     
       
@@ -26,10 +26,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.30068a00.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6a10b989.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.356b1318.min.css">
       
       
 
@@ -223,7 +223,7 @@
         
   
   <span class="md-ellipsis">
-    Python notebook
+    Updaten Hydromedah
   </span>
   
 
@@ -314,42 +314,90 @@
 
 
 <h1 id="resultaten-hydromedah-model">Resultaten Hydromedah model</h1>
-<h2 id="resultaat-aangepaste-peilgebieden">Resultaat aangepaste peilgebieden</h2>
-<p>De peilgebieden zijn aangepast zoals beschreven in het Python notebook. 
-In figuur 1 en 2 worden de verschilkaarten weergegeven, waarbij respectievelijk het nieuwe winterpeil minus het Hydromedah winterpeil en het nieuwe zomerpeil minus het Hydromedah zomerpeil worden getoond. Uit deze figuren blijkt dat de peilen over het algemeen zijn verlaagd.</p>
-<p>In figuur 1 en 2 zie je verschilkaarten tussen respectievelijk het nieuwe winterpeil minus het Hydromedah winterpeil en het nieuwe zomerpeil minus het Hydromedah zomerpeil. Uit deze figuren blijkt dat de peilen over het algemeen verlaagd zijn. 
-<img src="../figuren/verschilkaartwinterpeilen.png" alt= "winterpeilen" width="110%" height="100%">
-Figuur 1: Verschil nieuw winterpeil minus Hydromedah winterpeil [m] 
-<img src="../figuren/verschilkaartzomerpeilen.png" alt= "zomerpeilen" width="110%" height="100%">
-Figuur 2: Verschil nieuw zomerpeil minus Hydromedah zomerpeil [m]</p>
-<h2 id="resultaat-aangepaste-deklaagweerstand">Resultaat aangepaste deklaagweerstand</h2>
-<p>Zoals te zien is in de figuur zijn de weerstanden in het LHM in veel gebieden veel hoger dan de weerstand in het LHM. </p>
-<p><img src="../figuren/C-waarden.png" alt= "C-waarden Hydromedah en LHM" width="100%" height="100%">
-Figuur 3: Weerstand deklaag [dag] in Hydromedah (bovenste figuur) en LHM (onderste figuur)</p>
-<h2 id="resultaat-gxgs">Resultaat GXG's</h2>
-<p>In deze paragraaf vindt u de resultaten van de GLG, GHG en GVG van:
-- Hydromedah model run gedraaid in 2021 (figuur 4)
-- Hydromedah model run gedraaid in 2023 (figuur 5)
-- aangepaste Hydromedah model gedraaid in 2023 (nieuwe peilgebieden kaart en deklaagweerstand overgenomen uit LHM) (figuur 6)</p>
-<p>Zoals te zien is in de figuren zijn de GXG's van 2021 en 2023 niet gelijk. We moeten de oorzaak hiervan nog achterhalen. </p>
-<p><img src="../figuren/GXG_2021_rapport.png" alt= "" width="100%" height="100%">
-Figuur 4: GXG kaarten van het Hydromedah model (2021)</p>
-<p><img src="../figuren/gxg_huidig_250.png" alt= "" width="100%" height="100%">
-Figuur 5: GXG kaarten van het Hydromedah model (2023)</p>
-<p><img src="../figuren/gxg_huidig_250_C_L1_LHM_Wl.png" alt= "" width="100%" height="100%">
-Figuur 6: GXG kaarten van het aangepaste Hydromedah model(2023):nieuwe peilgebieden kaart en deklaagweerstand overgenomen uit LHM</p>
-<h2 id="resultaat-grondwatertrappen">Resultaat grondwatertrappen</h2>
-<p>Hierbij de resultaatfiguren van de grondwatertrappen van:
-- Hydromedah model run gedraaid in 2021 (figuur 7)
-- Hydromedah model run gedraaid in 2023 (figuur 8)
-- aangepaste Hydromedah model gedraaid in 2023 (nieuwe peilgebieden kaart en deklaagweerstand overgenomen uit LHM) (figuur 9)</p>
-<p>Zoals te zien is in de figuren zijn de Grondwatertrappen van 2021 en 2023 niet gelijk. We moeten de oorzaak hiervan nog achterhalen. </p>
-<p><img src="../figuren/grondwatertrappen_2021rapport.png" alt= "" width="100%" height="100%">
-Figuur 7: Grondwatertrappen kaart van het Hydromedah model (2021)</p>
-<p><img src="../figuren/grondwatertrappen_huidig_250.png" alt= "" width="100%" height="100%">
-Figuur 8: Grondwatertrappen kaart van Hydromedah model (2023)</p>
-<p><img src="../figuren/grondwatertrappen_huidig_250_C_L1_LHM_Wl.png" alt= "" width="100%" height="100%">
-Figuur 9: Grondwatertrappen kaart van het aangepaste Hydromedah model (2023):nieuwe peilgebieden kaart en deklaagweerstand overgenomen uit LHM</p>
+<p>De resultaten zijn gepresenteerd aan de hand van de volgende paragrafen:<br />
+1 Reproductie originele run<br />
+2 Effect aanpassing deklaagweerstand<br />
+3 Effect aanpassing peilen<br />
+4 Effect aanpassing peilen en deklaagweerstand<br />
+5 Conclusies en aanbevelingen  </p>
+<h2 id="1-reproductie-originele-run">1 Reproductie originele run</h2>
+<h3 id="11-vragen">1.1 Vragen</h3>
+<p>In december 2021 is met hdsrhipy een originele run gedraaid met Hydromedah. Hiervan zijn de resultaten opgenomen in de rapportage.<br />
+Wij proberen deze originele run te reproduceren en stellen de volgende vragen:  </p>
+<ol>
+<li>Is de reproductie identiek aan de resultaten van 2021? Nee, dan gaan we naar vragen 2 en 3  </li>
+<li>Zijn de verschillen te verklaren?  </li>
+<li>Levert de reproductie betere resultaten?   </li>
+</ol>
+<h3 id="_1"></h3>
+<h4 id="vraag-1-is-de-reproductie-identiek-aan-de-resultaten-van-de-2021">Vraag 1 Is de reproductie identiek aan de resultaten van de 2021?</h4>
+<p>De resultaten van de originele run verschillen met de originele run uit 2021: <br />
+-  Blauw: Grondwaterstand is hoger dan in 2021<br />
+-  Rood:  Grondwaterstand is lager dan in 2021  </p>
+<p><img src="../figuren/AfwijkingGLGtov2021.png" width="50%" height="50%"><img src="../figuren/AfwijkingGHGtov2021.png" width="50%" height="50%"></p>
+<h4 id="vraag-2-zijn-de-verschillen-te-verklaren">Vraag 2 Zijn de verschillen te verklaren?</h4>
+<p>We weten vooralsnog niet waardoor deze verschillen ontstaan. We hebben de volgende vragen beantwoord om een verklaring te vinden:</p>
+<ul>
+<li>Is er een ander Hydromedah model gebruikt? Nee, de modellen zijn identiek  </li>
+<li>Is er andere forcering gebruikt? De forcering(neerslag en verdamping is in 2021 niet opgeslagen, omdat de bestanden te groot waren. We kunnen
+dus niet met zekerheid zeggen dat de forcering gelijk is.  </li>
+<li>Zijn er andere software/processing scripts  gebruikt (hdsrhipy)? Het model wordt met dezelfde imodflow versie gedraaid.
+Wel is het Python environment van de originele run niet opgeslagen. Dit wordt gebruikt voor de pre en postprocessing van het model. </li>
+</ul>
+<h4 id="vraag-3-levert-de-reproductie-betere-resultaten">Vraag 3  Levert de reproductie betere resultaten?</h4>
+<p>Kwalitatief: De nieuwe resultaten zien er plausibeler uit dan de resultaten van 2021: Vreemd patroon in GXG kaarten, zie onderstaande GVG</p>
+<p><img src="../figuren/GVG_huidig_origineel.png" width="100%" height="100%"></p>
+<p>Kwantitatief: De resultaten zien er 
+Op basis van code uit de validatie van het LHM: =&gt;127 metingen die geschikt zijn voor validatie</p>
+<p><img src="../figuren/Kwantitatieve_validatie_huidigerun_metingen.png" width="100%" height="100%"></p>
+<p>Kwantitatief scoort de huidige runbeter op de LHM toetsingscriteria (HKV, 2021), maar beide runs scoren een onvoldoende.</p>
+<p><img src="../figuren/Origineel_vs_huidig_tabel.png" width="100%" height="100%"></p>
+<p>Kwantitatief: De vraag is of toetsing aan LHM criteria, in dit geval, zinnig is: </p>
+<ul>
+<li>Aantal validatie metingen beperkt (127) en liggen veelal in clusters; de punten zijn misschien niet zo representatief voor het hele gebied      </li>
+<li>Ruimtelijk beeld van de afwijking tussen beide modellen op validatiemeetpunten is gelijk bij GXG’s; verschillen tussen de resultaten zijn klein; zie onderstaande figuren.  </li>
+<li>In Python notebook kun je de punten aanklikken en de exacte afwijking per punt zien.  </li>
+</ul>
+<p><img src="../figuren/Voorspelfout GHG model -meting-originele en basisrun.png" width="100%" height="100%"></p>
+<h2 id="2-aanpassing-deklaagweerstand">2 Aanpassing deklaagweerstand</h2>
+<p>De deklaagweerstand van LHM is in het algemeen veel lager dan de deklaagweerstand van Hydromedaha, zie de onderstaande figuren.
+Het effect op de GLG en GHG door lagere LHM deklaagweerstand is:  </p>
+<ul>
+<li>In infiltratiegebieden zakt de grondwaterstand (rode gebieden in figuren op volgende pagina)</li>
+<li>In drainagebieden stijgt de grondwaterstand (blauwe gebieden in figuren op volgende pagina)</li>
+<li>In de GLG zie je in drainagegebieden meer effect dan in de GHG. De grondwaterstand bij GHG is zo hoog, dat deze wordt afgetopt door de opgelegde drainagehoogte.</li>
+</ul>
+<p><img src="../figuren/deklaagweerstand_hydmed_lhm.png" width="52%" height="52%"><img src="../figuren/Effect_deklaagweerstand op GLG en GHG.png" width="45%" height="45%"></p>
+<p>De aanpassing van de deklaagweerstand heeft een nihil effect op de statistiek van de LHM criteria. 
+<img src="../figuren/validatie-deklaagweerstand-tabel.png" width="100%" height="100%"></p>
+<h2 id="3-aanpassing-peilenkaart">3 Aanpassing peilenkaart</h2>
+<p>In het Python notebook vind je de stappen hoe de nieuwe peilen verwerkt zijn in het Hydromedah model
+- Winter en zomerpeil zijn in de nieuwe peilenkaart in veel gebieden lager. Dit is terug te zien in de GLG en GHG
+- Het effect van de aanpassing van de deklaagweerstand is groter dan de aanpassingen in de peilen
+- We gaan ervan uit dat deze nieuwe peilen niet representatief zijn voor de periode 2010-2020. Een vergelijking met metingen heeft daarmee geen zin</p>
+<p>In onderstaande figuen zie je verschilkaarten tussen respectievelijk het nieuwe winterpeil minus het Hydromedah winterpeil en het nieuwe zomerpeil minus het Hydromedah zomerpeil. Uit deze figuren blijkt dat de peilen over het algemeen verlaagd zijn. </p>
+<p><img src="../figuren/Verschilkaart-nieuwe-peilen.png" width="52%" height="52%"><img src="../figuren/effect_peilen_op_GLG en GHG.png" width="48%" height="48%"></p>
+<h2 id="4-gecombineerd-resultaat">4 Gecombineerd resultaat</h2>
+<p>Het effect op GLG en GHG door de aanpassing van de peilen en de deklaagweerstand wordt gepresenteerd in onderstaande figuur. Hierna tonen we de grondwatertrappenkaarten voor het huidig modelresultaat en het gecombineerde modelresultaat (aangepaste peilen en deklaagweerstand LHM):</p>
+<p><img src="../figuren/gecombineerd_resultaat_GLG.png" width="50%" height="50%"><img src="../figuren/gecombineerd_resultaat_GHG.png" width="50%" height="50%"></p>
+<h2 id="5-conclusies-en-aanbevelingen">5 Conclusies en aanbevelingen</h2>
+<h3 id="51-conclusies">5.1 Conclusies</h3>
+<ul>
+<li>De originele run die gedraaid is in 2021 verschilt van de huidige originele run. We weten vooralsnog niet waarom er een verschil is tussen beiden resultaten.</li>
+<li>Zowel de huidige originele run als de huidige basisrun met LHM deklaagweerstand als de originelerun in 2021 produceren resultaten die ruim slechter zijn dan de toetscriteria die opgesteld zijn voor het LHM. Kanttekening hierbij: <br />
+   1) Er zijn slechts 127 metingen die geschikt zijn om te valideren. <br />
+   2) De metingen liggen veelal in clusters in het HDSR gebied.   </li>
+<li>De deklaagweerstand van het LHM is in grote gebieden van het HDSR gebied vele malen kleiner dan de Hydromedah deklaagweerstand. Dit resulteert in een hogere grondwaterstand in de drainerende gebieden en een lagere grondwaterstand in de infiltratiegebieden</li>
+<li>Het peil van de waterlopen is aangepast mbv de nieuwe peilenkaart. In grote gebieden gaan de peilen omlaag wat ook te zien is in de GLG en GHG</li>
+</ul>
+<h3 id="52-aanbevelingen">5.2 Aanbevelingen</h3>
+<ul>
+<li>De originele run uit 2021 was niet te reproduceren. Dit kan in de toekomst alleen voorkomen worden door voldoende beheer en onderhoud op hdsrhipy, het model, de randvoorwaarden en de rekensoftware.</li>
+<li>Het model voldoet niet aan de toetscriteria van het LHM tav GHG en GLG. De vraag is hoeveel effect deze fout heeft op het TEO debiet. Dit kan, buiten de scope van deze opdracht, verder onderzocht worden door het vergelijken van gemeten en gesimuleerde afvoeren en afvoerstatistiek.</li>
+<li>Het basismodel was, voor zover wij kunnen overzien, niet eerder getoetst aan objectieve criteria. Wij bevelen aan zulke criteria op te stellen en te gebruiken voor toekomstige modelstudies.</li>
+</ul>
+<h2 id="literatuur">Literatuur:</h2>
+<p>HKV, Acacia water en Berendrecht consultancy (2021), “Validatie en toetsing LHM 4.1”, HKV rapport 4313.10, https://puc.overheid.nl/rijkswaterstaat/doc/PUC_640427_31/1/   </p>
 
 
 
@@ -402,10 +450,11 @@ Figuur 9: Grondwatertrappen kaart van het aangepaste Hydromedah model (2023):nie
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      <script src="../assets/javascripts/bundle.aecac24b.min.js"></script>
       
     
   </body>

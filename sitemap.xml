@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://d2hydro.github.io/hydromedah/</loc>
-         <lastmod>2023-09-25</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://d2hydro.github.io/hydromedah/resultaat_hydromedah/</loc>
-         <lastmod>2023-09-25</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://d2hydro.github.io/hydromedah/updaten_hydromedah/</loc>
-         <lastmod>2023-09-25</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://d2hydro.github.io/hydromedah/vergelijking_laterals/</loc>
-         <lastmod>2023-09-25</lastmod>
+         <lastmod>2023-10-11</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
